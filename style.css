@@ -1,0 +1,730 @@
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+body {
+    background-color: #111029;
+    color: aliceblue;
+    font-family: Arial;
+    font-size: 20px;
+    overflow: hidden;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    padding: 15px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+}
+
+@keyframes scaleAnimation {
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.button {
+    background-color: transparent;
+    border: 2px solid gray;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 70px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+    animation: scaleAnimation 4s infinite;
+    font-size: 1.5em;
+    line-height: 2.0;
+}
+
+.button:hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: gray;
+    animation: scaleAnimation 4s infinite;
+}
+
+.logo {
+    margin-left: 15px;
+}
+
+.links {
+    margin-right: 15px;
+}
+
+nav img {
+    width: 100px;
+    height: auto;
+}
+
+nav .link {
+    color: darkgrey;
+    text-decoration: none;
+    padding: 10px;
+    background-color: rgba(0, 0, 0, 0.0);
+    border-radius: 5px;
+    transition: background-color 0.3s, font-size 0.3s;
+}
+
+.section {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #fff;
+    font-size: 6em;
+    position: relative;
+    overflow: hidden;
+}
+
+.section video.background-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: -1;
+}
+
+.section p {
+    font-size: 20px !important;
+}
+
+
+
+.red {
+    background-color: black;
+    /* Dodajte ostale stilove za red sekciju */
+}
+
+.orange {
+    background-color: black;
+    /* Dodajte ostale stilove za orange sekciju */
+}
+
+.grey {
+    background-color: gray;
+    /* Dodajte ostale stilove za grey sekciju */
+}
+
+.tekstic {
+    font-family: monospace !important;
+    font-size: 5px !important;
+}
+
+.small-text {
+    font-size: 25px !important;
+    color: gray;
+}
+
+.image-container {
+    border-radius: 50%;
+    float: left;
+    width: 152%;
+    margin-right: 20px;
+}
+
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+    font-size: 20px;
+    color: white;
+}
+
+.about-image {
+    border-radius: 60%;
+    display: block;
+    margin-right: 50px;
+    width: 340px;
+    height: 420px;
+    position: relative;
+    border: 5px solid crimson !important;
+    animation: borderAnimation 5s infinite linear;
+}
+
+.extra-small-text {
+    font-size: 6px !important;
+    color: gray;
+    margin-top: 0;
+}
+
+.jedan {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.dva {
+    font-size: 30px;
+    margin-top: 5px;
+}
+
+.tri {
+    font-size: 30px;
+    margin-top: 5px;
+    color: gray;
+    text-shadow: #111029;
+}
+
+span {
+    color: white;
+}
+
+.span {
+    color: crimson;
+}
+
+nav .link:hover {
+    color: gray;
+    font-size: 25px;
+}
+
+@keyframes jump {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.jedan:hover, .dva:hover {
+    animation: jump 0.5s;
+}
+
+.link {
+    font-size: 20px;
+}
+
+.baja {
+    font-size: 20px;
+    color: rgba(255, 255, 255, 0.4);
+    text-shadow: 3px 5px 3px rgba(128, 128, 128, 0.7);
+}
+
+.bajko {
+    font-size: 20px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  
+color: rgba(255, 255, 255, 0.7);
+font-weight: bold;
+text-shadow: 2px 3px 2px rgba(128, 128, 128, 0.7);
+   
+}
+
+.kartice {
+    font-size: 20px;
+}
+
+.container {
+    display: flex;
+    position: relative;
+    justify-content: center;
+    align-items: center;
+    max-width: 1200px;
+    flex-wrap: wrap;
+    z-index: 1;
+}
+
+#section3 .card {
+    position: relative;
+    width: 220px;
+    height: 230px;
+    margin: 40px;
+    border-radius: 15px;
+    background-color: rgba(255, 255, 255, 0.2);
+    overflow: hidden;
+    display: flex;
+    align-self: center;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    border-left: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+}
+
+#section3 .card .content {
+    padding: 20px;
+    text-align: center;
+    transform: 0.5s;
+}
+
+.kontent {
+    margin-top: -500px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+}
+
+.ekser {
+    color: gray;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.skilet {
+    margin-right: 200px;
+    font-size: 50px;
+}
+
+@keyframes borderAnimation {
+    0%, 100% {
+        border-color: white;
+    }
+    25% {
+        border-color: gray;
+    }
+    50% {
+        border-color: white;
+    }
+    75% {
+        border-color: gray;
+    }
+    100% {
+        border-color: white;
+    }
+}
+
+
+#section2 {
+    position: relative;
+    background-color: black;
+}
+.about {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-content {
+    display: flex;
+    align-items: center;
+}
+
+.about-text {
+    flex: 1;
+    padding: 20px;
+}
+
+.about-image {
+    border-radius: 60%;
+    display: block;
+    margin-right: 50px; /* Prilagodite ovu vrednost prema željenom razmaku */
+    width: 360px; /* Prilagodite veličinu slike prema potrebi */
+    height: 460px; /* Prilagodite veličinu slike prema potrebi */
+    position: relative;
+    border: 5px solid crimson !important;
+    animation: borderAnimation 5s infinite linear;
+}
+.tri:hover {
+    text-shadow: 6px 6px 10px white;
+    transition: color 0.3s, text-shadow 0.3s;
+    color:white;
+    transition: background-color 0.3s;
+}
+
+.container .card {
+    position: relative;
+    width: 250px;
+    height: 330px;
+    margin: 30px;
+    box-shadow: 20px 20px 50px rgba(0, 0, 0, 0.5);
+    border-radius: 15px;
+    background: rgba(255, 255, 255, 0.1);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.5);
+    backdrop-filter: blur(5px);
+    border-left: 2px solid rgba(255, 255, 255, 0.5);
+    
+}
+
+.kartice{
+    color:gray;
+}
+
+.container .card .content{
+    padding:20px;
+    text-align:center;
+    transition:0.5s;
+
+}
+
+.container .card .content .kartice{
+    position:absolute;
+    top:-10px;
+    left:150px;
+    font-size:1.5em;
+    color:rgba(255, 255, 255, 0.05);
+  
+
+}
+
+.container .card .content {
+    position: relative;
+    border-radius: 8px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1);
+    color: gray;
+    padding: 20px;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.container .card .content .slika {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('projekti.jpg');
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    z-index: -4;
+    opacity: 0.3; /* Providnost slike */
+}
+
+.container .card .content .kartice {
+    position: absolute;
+    top: 60px !important;
+    left: 0;
+    width: 100% !important;
+    height: 100%;
+    z-index: 1;
+    color: rgba(255,255,255,0.08);
+    font-size:70px;
+   
+}
+
+.link {
+    color: crimson !important;
+    font-size: 20px !important;
+    font-family: monospace;
+    text-decoration: none !important;
+    transition: font-size 1s ease !important; /* Dodajte tranziciju za promenu veličine fonta */
+}
+
+.link:hover {
+    font-size: 25px !important; /* Povećajte veličinu fonta prilikom hovera */
+}
+
+
+.container .card .content a {
+    position:relative;
+    display:inline-block;
+    padding:12px 20px;
+    margin-top:15px;
+    background: rgba(255, 255, 255, 2) !important;
+    box-shadow: 5px 10px 20px rgba(0,0,0,1);
+    color:black;
+    border-radius:20px;
+    text-decoration:none;
+   padding-bottom:10px;
+   margin-top:10px;
+   transform: scale(0.8); /* Početna veličina */
+  
+}
+.container .card .content a i.fa {
+    margin-left: 5px;
+    color:gray;
+}
+
+
+.section {
+    position: relative;
+    width: 100%;
+    height: 100vh; /* Visina sekcije prema visini prozora */
+}
+
+.black {
+    background-color: black;
+    color: white;
+}
+
+.background-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url('city.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.5; /* Smanjena prozirnost pozadinske slike */
+}
+#section4 .content h1 {
+    font-size:60px; /* Prilagodite veličinu fonta prema potrebama */
+}
+#section4 {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start; /* Pomeriti sadržaj prema vrhu sekcije */
+    align-items: center; /* Centriranje horizontalno */
+    height: 100vh;
+    color: white;
+}
+
+#section4 .content {
+    position: relative;
+    text-align: center;
+}
+#section4 .content h1 {
+    margin-bottom:-5px; /* Dodajte razmak ispod h1 */
+}
+
+
+ 
+    /* Ostali stilovi za p element */
+
+
+
+
+#section4 .content .centered {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+#section4 .content h1 {
+    font-size: 90px;
+    color: rgba(255, 255, 255, 0.5);
+
+}
+.norm{
+    color:crimson;
+}
+h1 {
+    box-shadow: 0px 0px 0px rgba(0, 0, 0, 0.1); /* Početna senka */
+    transition: box-shadow 0.3s ease; /* Postavlja tranziciju senke */
+}
+
+h1:hover {
+    box-shadow: 6px 6px 6px rgba(0, 0, 0, 0.8); /* Povećava senku na hover */
+}
+.container .contactInfo .box .icon .text .trt {
+    margin: 2px; /* Postavlja marginu na nulu za potpuno levo poravnanje */
+}
+.tr, .trt{
+    position: relative;
+    top: 120px; /* Pomeranje prema dole */
+    left: -400px; /* Pomeranje ulevo */ 
+}
+
+.trt {
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.3);
+    bottom: 60px;
+    position: relative;
+}
+
+.tr{
+    text-align:center;
+
+    opacity:0.8;
+    transition: left 0.3s ease;
+}
+
+
+
+.trr{
+    color: rgba(255, 255, 255, 0.3);
+    left: 200px;
+    font-size:80px;
+    margin-top: -10px;
+}
+
+.trw{
+    left: -300px;
+    margin-bottom: -20px;
+    position: relative;
+    left: 0;
+}
+ 
+    
+
+.icon{
+    color:black;
+}
+.trl{
+    bottom: -1px;
+    
+}
+
+
+
+
+
+
+
+
+
+.trs {
+    font-size: 80px;
+    color: rgba(255, 255, 255, 0.3);
+    position: absolute;
+    bottom: 25px;
+    right: 20px;
+    left:400px;
+   
+}
+
+.trl {
+    text-align: right;
+    position: absolute;
+    top: 4Opx;
+    right: 20px;
+    left:400px;
+    font-weight: normal;
+    transition: box-shadow 0.3s ease, color 0.3s ease,font-weight 0.3s ease;
+}
+
+
+.trl:hover{
+    color:crimson;
+    font-weight: bold;
+}
+.trw:hover{
+   
+    color:crimson;
+    font-weight: bold;
+    opacity:1;
+}
+.tr:hover{
+    color:crimson;
+    font-weight: bold;
+    opacity:1;
+}
+
+
+/* Stilovi za navigacioni meni koji se prikazuje na većim ekranima */
+.links {
+    display: flex;
+    align-items: center;
+}
+
+/* Stilovi za ikonu hamburger menija */
+.hamburger-icon {
+    display: none; /* Inicijalno je sakrivena */
+    cursor: pointer;
+}
+
+/* Responsivnost za prikazivanje menija i ikone hamburger menija */
+@media (min-width: 50px ) and (max-width: 360px ) {
+    /* Sakrij navigacioni meni za manje ekrane */
+    .links {
+        display: none;
+    }
+
+    /* Prikazi ikonu hamburger menija na manjim ekranima */
+    .hamburger-icon {
+        display: block;
+    }
+    .closeMenu {
+        display: none;
+      }
+      
+}
+
+.hamburger-icon {
+    display: none; /* Početno sakrivanje na većim rezolucijama */
+}
+
+.nav-background {
+    display: none; /* Početno sakrivanje */
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.2);
+    z-index: 9998
+}
+
+
+.card-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between; /* Opciono, da bi raspored bio ravnomeran */
+  }
+  
+  .card {
+    width: calc(33.33% - 10px) ; /* Oduzimamo marginu kako bi se kartice smestile u red */
+    margin: 55px !important;
+    margin-top:55px !important;
+    margin-bottom:10px !important;
+    /* Margina između kartica */
+    /* Ostali stilovi za kartice */
+  }
+  
+  
+
+  .section {
+    position: relative; /* Dodajte relativnu poziciju sekciji */
+  }
+  
+  .project-title {
+    position: absolute;
+     top: -55px !important;
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: monospace !important;
+    text-align: center;
+    font-size: 24px;
+    margin-top: 20px; /* Prilagodite razmak između naslova i kartica po potrebi */
+    background:none; /* Opciono: dodajte pozadinu ispod teksta da se bolje istakne */
+    padding: 10px 10px;
+    margin-top:- 10px; /* Opciono: dodajte malu padding za bolji izgled */
+  }
+  
+  /* Ostatak vašeg postojećeg CSS-a za kartice i sekciju */
+  .container {
+    margin-top: 35px; /* Dodatni razmak između teksta i kartica */
+  }
+  .klasika{
+    color:crimson;
+  }
+
+  .mamlaz {
+    color: blue; /* Promenjena boja teksta */
+    transition: transform 0.3s ease;
+}
+
+/* Stilovi za efekat skakanja teksta na hover klase "mamlaz" */
+.mamlaz:hover {
+    transform: translateY(-10px);
+}
